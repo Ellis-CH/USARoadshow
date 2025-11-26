@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c3c35558ef7fb7db3c5e5721313ac664 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <div style='position: fixed; bottom: 50px; left: 50px; width: 400px; height: 500px; overflow: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:14px;'><b>Legend:</b><br>1. HARVARD UNIVERSITY<br>2. UNIVERSITY OF CALIFORNIA SYSTEM<br>3. UNIVERSITY SYSTEM OF OHIO<br>4. UNIVERSITY OF TORONTO<br>5. UNIVERSITY OF NORTH CAROLINA<br>6. STATE UNIVERSITY SYSTEM OF FLORIDA<br>7. PENNSYLVANIA COMMONWEALTH SYSTEM OF HIGHER EDUCATION PCSHE<br>8. JOHNS HOPKINS UNIVERSITY<br>9. UNITED STATES DEPARTMENT OF AGRICULTURE USDA<br>10. UNIVERSITY OF TEXAS SYSTEM<br>11. CORNELL UNIVERSITY<br>12. UNIVERSITY OF ALBERTA<br>13. NATIONAL INSTITUTES OF HEALTH NIH USA<br>14. UNIVERSITY OF COLORADO SYSTEM<br>15. UNIVERSITY OF ILLINOIS SYSTEM<br>16. TUFTS UNIVERSITY<br>17. UNIVERSITY OF BRITISH COLUMBIA<br>18. MCGILL UNIVERSITY<br>19. UNIVERSITY OF WASHINGTON<br>20. UNIVERSITY OF MASSACHUSETTS SYSTEM<br>21. UNIVERSITY OF MINNESOTA SYSTEM<br>22. UNIVERSITY OF WASHINGTON SEATTLE<br>23. PENNSYLVANIA STATE UNIVERSITY<br>24. STANFORD UNIVERSITY<br></div>
+    
+            <div class="folium-map" id="map_c3c35558ef7fb7db3c5e5721313ac664" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c3c35558ef7fb7db3c5e5721313ac664 = L.map(
+                "map_c3c35558ef7fb7db3c5e5721313ac664",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d409f1a95a8da208b329295d2995a3e5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d409f1a95a8da208b329295d2995a3e5.addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var marker_2779c82dc9900e9145acf975bdafa4a3 = L.marker(
+                [42.377, -71.1167],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_d5748b0f23e0d82e3b8e7106da56adb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e3daa27ef045055ecbfb92123a09509 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e650c8f342c6a5441eaaa91d1ed737e = $(`<div id="html_1e650c8f342c6a5441eaaa91d1ed737e" style="width: 100.0%; height: 100.0%;"><b>1. HARVARD UNIVERSITY</b></div>`)[0];
+                popup_1e3daa27ef045055ecbfb92123a09509.setContent(html_1e650c8f342c6a5441eaaa91d1ed737e);
+            
+        
+
+        marker_2779c82dc9900e9145acf975bdafa4a3.bindPopup(popup_1e3daa27ef045055ecbfb92123a09509)
+        ;
+
+        
+    
+    
+            marker_2779c82dc9900e9145acf975bdafa4a3.bindTooltip(
+                `<div>
+                     1. HARVARD UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2779c82dc9900e9145acf975bdafa4a3.setIcon(icon_d5748b0f23e0d82e3b8e7106da56adb7);
+            
+    
+            var marker_056e9eb091abf3b4b77112486c2734c5 = L.marker(
+                [37.8715, -122.273],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_b4c4dd121a91891ed5c2fad6a1b9bfd4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e93e8749d97fc18eeb127a38e0b009c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7656e12436d8bcec9e58ad43e4ec67cd = $(`<div id="html_7656e12436d8bcec9e58ad43e4ec67cd" style="width: 100.0%; height: 100.0%;"><b>2. UNIVERSITY OF CALIFORNIA SYSTEM</b></div>`)[0];
+                popup_4e93e8749d97fc18eeb127a38e0b009c.setContent(html_7656e12436d8bcec9e58ad43e4ec67cd);
+            
+        
+
+        marker_056e9eb091abf3b4b77112486c2734c5.bindPopup(popup_4e93e8749d97fc18eeb127a38e0b009c)
+        ;
+
+        
+    
+    
+            marker_056e9eb091abf3b4b77112486c2734c5.bindTooltip(
+                `<div>
+                     2. UNIVERSITY OF CALIFORNIA SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_056e9eb091abf3b4b77112486c2734c5.setIcon(icon_b4c4dd121a91891ed5c2fad6a1b9bfd4);
+            
+    
+            var marker_042600c190d4c036c98de089553219d1 = L.marker(
+                [39.9612, -82.9988],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_981325ab054df2dbcc0833122ecbf23a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61c176aff288aea7791fb2f2c1996d89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc2129d1828b52b61916a9843a7bc3c3 = $(`<div id="html_bc2129d1828b52b61916a9843a7bc3c3" style="width: 100.0%; height: 100.0%;"><b>3. UNIVERSITY SYSTEM OF OHIO</b></div>`)[0];
+                popup_61c176aff288aea7791fb2f2c1996d89.setContent(html_bc2129d1828b52b61916a9843a7bc3c3);
+            
+        
+
+        marker_042600c190d4c036c98de089553219d1.bindPopup(popup_61c176aff288aea7791fb2f2c1996d89)
+        ;
+
+        
+    
+    
+            marker_042600c190d4c036c98de089553219d1.bindTooltip(
+                `<div>
+                     3. UNIVERSITY SYSTEM OF OHIO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_042600c190d4c036c98de089553219d1.setIcon(icon_981325ab054df2dbcc0833122ecbf23a);
+            
+    
+            var marker_b175e91edb9e8677d3f31168170d5b20 = L.marker(
+                [43.6629, -79.3957],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_6db8116574b28d302b3c696f38828f38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1374190a34f7ec85073ccfa6450f4956 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb5f170d4691d7fe0ab6156b5634fd07 = $(`<div id="html_cb5f170d4691d7fe0ab6156b5634fd07" style="width: 100.0%; height: 100.0%;"><b>4. UNIVERSITY OF TORONTO</b></div>`)[0];
+                popup_1374190a34f7ec85073ccfa6450f4956.setContent(html_cb5f170d4691d7fe0ab6156b5634fd07);
+            
+        
+
+        marker_b175e91edb9e8677d3f31168170d5b20.bindPopup(popup_1374190a34f7ec85073ccfa6450f4956)
+        ;
+
+        
+    
+    
+            marker_b175e91edb9e8677d3f31168170d5b20.bindTooltip(
+                `<div>
+                     4. UNIVERSITY OF TORONTO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b175e91edb9e8677d3f31168170d5b20.setIcon(icon_6db8116574b28d302b3c696f38828f38);
+            
+    
+            var marker_2555f13a2a451b1ba3f8bde6e08b1e14 = L.marker(
+                [35.9049, -79.0469],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_3cd029b3041f69d6b0041538da393dbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_241f11ff50d84aeecc6278a557f6bb4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_162da2b51ed48a46c9bf3ff8674024db = $(`<div id="html_162da2b51ed48a46c9bf3ff8674024db" style="width: 100.0%; height: 100.0%;"><b>5. UNIVERSITY OF NORTH CAROLINA</b></div>`)[0];
+                popup_241f11ff50d84aeecc6278a557f6bb4f.setContent(html_162da2b51ed48a46c9bf3ff8674024db);
+            
+        
+
+        marker_2555f13a2a451b1ba3f8bde6e08b1e14.bindPopup(popup_241f11ff50d84aeecc6278a557f6bb4f)
+        ;
+
+        
+    
+    
+            marker_2555f13a2a451b1ba3f8bde6e08b1e14.bindTooltip(
+                `<div>
+                     5. UNIVERSITY OF NORTH CAROLINA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2555f13a2a451b1ba3f8bde6e08b1e14.setIcon(icon_3cd029b3041f69d6b0041538da393dbb);
+            
+    
+            var marker_c982da5f4ad860b2887b7cf295073aed = L.marker(
+                [30.4383, -84.2807],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_78bf63f6a698e6c5f0bde49b53d5d820 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3573706b4e30d818105a61206d71840 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6891fd5325a63fc1648acbc929b2233c = $(`<div id="html_6891fd5325a63fc1648acbc929b2233c" style="width: 100.0%; height: 100.0%;"><b>6. STATE UNIVERSITY SYSTEM OF FLORIDA</b></div>`)[0];
+                popup_c3573706b4e30d818105a61206d71840.setContent(html_6891fd5325a63fc1648acbc929b2233c);
+            
+        
+
+        marker_c982da5f4ad860b2887b7cf295073aed.bindPopup(popup_c3573706b4e30d818105a61206d71840)
+        ;
+
+        
+    
+    
+            marker_c982da5f4ad860b2887b7cf295073aed.bindTooltip(
+                `<div>
+                     6. STATE UNIVERSITY SYSTEM OF FLORIDA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c982da5f4ad860b2887b7cf295073aed.setIcon(icon_78bf63f6a698e6c5f0bde49b53d5d820);
+            
+    
+            var marker_710d3c0aafe37577d62a5ece1f786494 = L.marker(
+                [40.2732, -76.8867],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_2f926c87e732fb1f7814bb09b8eaec54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c5ad8467650b8e19bae1a52eec0dbc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e0fc00fbfc499631727af4ebfbdc77f = $(`<div id="html_0e0fc00fbfc499631727af4ebfbdc77f" style="width: 100.0%; height: 100.0%;"><b>7. PENNSYLVANIA COMMONWEALTH SYSTEM OF HIGHER EDUCATION PCSHE</b></div>`)[0];
+                popup_4c5ad8467650b8e19bae1a52eec0dbc5.setContent(html_0e0fc00fbfc499631727af4ebfbdc77f);
+            
+        
+
+        marker_710d3c0aafe37577d62a5ece1f786494.bindPopup(popup_4c5ad8467650b8e19bae1a52eec0dbc5)
+        ;
+
+        
+    
+    
+            marker_710d3c0aafe37577d62a5ece1f786494.bindTooltip(
+                `<div>
+                     7. PENNSYLVANIA COMMONWEALTH SYSTEM OF HIGHER EDUCATION PCSHE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_710d3c0aafe37577d62a5ece1f786494.setIcon(icon_2f926c87e732fb1f7814bb09b8eaec54);
+            
+    
+            var marker_6689586303f69ab333936d7d329068c2 = L.marker(
+                [39.3299, -76.6205],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_b740825a4ba253c512a2495dad2d15a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f8af42b2cab1e593d7ee76935a80c0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_364919adaf1c96435a5a03f33ff6c5f9 = $(`<div id="html_364919adaf1c96435a5a03f33ff6c5f9" style="width: 100.0%; height: 100.0%;"><b>8. JOHNS HOPKINS UNIVERSITY</b></div>`)[0];
+                popup_6f8af42b2cab1e593d7ee76935a80c0a.setContent(html_364919adaf1c96435a5a03f33ff6c5f9);
+            
+        
+
+        marker_6689586303f69ab333936d7d329068c2.bindPopup(popup_6f8af42b2cab1e593d7ee76935a80c0a)
+        ;
+
+        
+    
+    
+            marker_6689586303f69ab333936d7d329068c2.bindTooltip(
+                `<div>
+                     8. JOHNS HOPKINS UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6689586303f69ab333936d7d329068c2.setIcon(icon_b740825a4ba253c512a2495dad2d15a6);
+            
+    
+            var marker_113f1551bd01b77b5ac1fff81dcfb46d = L.marker(
+                [38.8869, -77.0146],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_0f2481e9fd8eb8cc4c54afc0f163c383 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c551bfba3b901cacb9d249381efc5db7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_244198f86600f952d25a0eb37fd8bf96 = $(`<div id="html_244198f86600f952d25a0eb37fd8bf96" style="width: 100.0%; height: 100.0%;"><b>9. UNITED STATES DEPARTMENT OF AGRICULTURE USDA</b></div>`)[0];
+                popup_c551bfba3b901cacb9d249381efc5db7.setContent(html_244198f86600f952d25a0eb37fd8bf96);
+            
+        
+
+        marker_113f1551bd01b77b5ac1fff81dcfb46d.bindPopup(popup_c551bfba3b901cacb9d249381efc5db7)
+        ;
+
+        
+    
+    
+            marker_113f1551bd01b77b5ac1fff81dcfb46d.bindTooltip(
+                `<div>
+                     9. UNITED STATES DEPARTMENT OF AGRICULTURE USDA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_113f1551bd01b77b5ac1fff81dcfb46d.setIcon(icon_0f2481e9fd8eb8cc4c54afc0f163c383);
+            
+    
+            var marker_c12a9caf034e97857b24f6be48467fc7 = L.marker(
+                [30.2849, -97.7341],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_a84b91b518015692ae51a122e1a1dbb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df28ab7dbedbd50cde092497f44fe84c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e745b598dd1272c73206b83a90c50489 = $(`<div id="html_e745b598dd1272c73206b83a90c50489" style="width: 100.0%; height: 100.0%;"><b>10. UNIVERSITY OF TEXAS SYSTEM</b></div>`)[0];
+                popup_df28ab7dbedbd50cde092497f44fe84c.setContent(html_e745b598dd1272c73206b83a90c50489);
+            
+        
+
+        marker_c12a9caf034e97857b24f6be48467fc7.bindPopup(popup_df28ab7dbedbd50cde092497f44fe84c)
+        ;
+
+        
+    
+    
+            marker_c12a9caf034e97857b24f6be48467fc7.bindTooltip(
+                `<div>
+                     10. UNIVERSITY OF TEXAS SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c12a9caf034e97857b24f6be48467fc7.setIcon(icon_a84b91b518015692ae51a122e1a1dbb7);
+            
+    
+            var marker_266dd66d01af822c8362a04a638247df = L.marker(
+                [42.4534, -76.4735],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_857b3300bc37cc8235225ad9b79ffc66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a15a5eeea0e6819551453f33f029bb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fce8f595c69c8b4440a67ea0d408496 = $(`<div id="html_5fce8f595c69c8b4440a67ea0d408496" style="width: 100.0%; height: 100.0%;"><b>11. CORNELL UNIVERSITY</b></div>`)[0];
+                popup_6a15a5eeea0e6819551453f33f029bb3.setContent(html_5fce8f595c69c8b4440a67ea0d408496);
+            
+        
+
+        marker_266dd66d01af822c8362a04a638247df.bindPopup(popup_6a15a5eeea0e6819551453f33f029bb3)
+        ;
+
+        
+    
+    
+            marker_266dd66d01af822c8362a04a638247df.bindTooltip(
+                `<div>
+                     11. CORNELL UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_266dd66d01af822c8362a04a638247df.setIcon(icon_857b3300bc37cc8235225ad9b79ffc66);
+            
+    
+            var marker_c7de366e3c16729b5e35d2222019fab1 = L.marker(
+                [53.5232, -113.5263],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_c9ec54c6d4dec699c3d67e5f6db10034 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cbecc7e7fe1d38e85760b78d9592a9a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c19b4aab982a1e0d72b9bd52ef74e60 = $(`<div id="html_9c19b4aab982a1e0d72b9bd52ef74e60" style="width: 100.0%; height: 100.0%;"><b>12. UNIVERSITY OF ALBERTA</b></div>`)[0];
+                popup_cbecc7e7fe1d38e85760b78d9592a9a5.setContent(html_9c19b4aab982a1e0d72b9bd52ef74e60);
+            
+        
+
+        marker_c7de366e3c16729b5e35d2222019fab1.bindPopup(popup_cbecc7e7fe1d38e85760b78d9592a9a5)
+        ;
+
+        
+    
+    
+            marker_c7de366e3c16729b5e35d2222019fab1.bindTooltip(
+                `<div>
+                     12. UNIVERSITY OF ALBERTA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7de366e3c16729b5e35d2222019fab1.setIcon(icon_c9ec54c6d4dec699c3d67e5f6db10034);
+            
+    
+            var marker_35682782aab0eb18e3c7dc193324822b = L.marker(
+                [39.0, -77.103],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_6cd23fdb1e8564252421b83317bf41f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b414faa278ef62eaea8e7ed341ddc6db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ed64c5c04b503327cea5c4506863f71 = $(`<div id="html_6ed64c5c04b503327cea5c4506863f71" style="width: 100.0%; height: 100.0%;"><b>13. NATIONAL INSTITUTES OF HEALTH NIH USA</b></div>`)[0];
+                popup_b414faa278ef62eaea8e7ed341ddc6db.setContent(html_6ed64c5c04b503327cea5c4506863f71);
+            
+        
+
+        marker_35682782aab0eb18e3c7dc193324822b.bindPopup(popup_b414faa278ef62eaea8e7ed341ddc6db)
+        ;
+
+        
+    
+    
+            marker_35682782aab0eb18e3c7dc193324822b.bindTooltip(
+                `<div>
+                     13. NATIONAL INSTITUTES OF HEALTH NIH USA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_35682782aab0eb18e3c7dc193324822b.setIcon(icon_6cd23fdb1e8564252421b83317bf41f9);
+            
+    
+            var marker_63a9ca409fd7c928457317b4a687ba93 = L.marker(
+                [40.0076, -105.2659],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_67d9eb369d644f60a384545d15ae75d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00ab1e72b6df01380fab95f255e52772 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4d2cfff9825acaa28bf4c536e742d34 = $(`<div id="html_c4d2cfff9825acaa28bf4c536e742d34" style="width: 100.0%; height: 100.0%;"><b>14. UNIVERSITY OF COLORADO SYSTEM</b></div>`)[0];
+                popup_00ab1e72b6df01380fab95f255e52772.setContent(html_c4d2cfff9825acaa28bf4c536e742d34);
+            
+        
+
+        marker_63a9ca409fd7c928457317b4a687ba93.bindPopup(popup_00ab1e72b6df01380fab95f255e52772)
+        ;
+
+        
+    
+    
+            marker_63a9ca409fd7c928457317b4a687ba93.bindTooltip(
+                `<div>
+                     14. UNIVERSITY OF COLORADO SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63a9ca409fd7c928457317b4a687ba93.setIcon(icon_67d9eb369d644f60a384545d15ae75d1);
+            
+    
+            var marker_a04c4c7edee943861c2109af9c1496ee = L.marker(
+                [40.1019, -88.2272],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_09a7cb72c1d106bed97ba91a33d8135d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d95827f43e3d8c7a79f630627b63ee7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d6e1f4e252ef45ceb5e6d1052d01e4a = $(`<div id="html_2d6e1f4e252ef45ceb5e6d1052d01e4a" style="width: 100.0%; height: 100.0%;"><b>15. UNIVERSITY OF ILLINOIS SYSTEM</b></div>`)[0];
+                popup_d95827f43e3d8c7a79f630627b63ee7e.setContent(html_2d6e1f4e252ef45ceb5e6d1052d01e4a);
+            
+        
+
+        marker_a04c4c7edee943861c2109af9c1496ee.bindPopup(popup_d95827f43e3d8c7a79f630627b63ee7e)
+        ;
+
+        
+    
+    
+            marker_a04c4c7edee943861c2109af9c1496ee.bindTooltip(
+                `<div>
+                     15. UNIVERSITY OF ILLINOIS SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a04c4c7edee943861c2109af9c1496ee.setIcon(icon_09a7cb72c1d106bed97ba91a33d8135d);
+            
+    
+            var marker_dca742215bc1829fee7db95a4ca598a2 = L.marker(
+                [42.4075, -71.119],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_1fbe10dbb795d28931d0347cb8cb7d53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da8d12c6f0b92a2afc5f69ab42373a7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3cc05d4ec91ddfbf26bb97c5cbf13f8c = $(`<div id="html_3cc05d4ec91ddfbf26bb97c5cbf13f8c" style="width: 100.0%; height: 100.0%;"><b>16. TUFTS UNIVERSITY</b></div>`)[0];
+                popup_da8d12c6f0b92a2afc5f69ab42373a7b.setContent(html_3cc05d4ec91ddfbf26bb97c5cbf13f8c);
+            
+        
+
+        marker_dca742215bc1829fee7db95a4ca598a2.bindPopup(popup_da8d12c6f0b92a2afc5f69ab42373a7b)
+        ;
+
+        
+    
+    
+            marker_dca742215bc1829fee7db95a4ca598a2.bindTooltip(
+                `<div>
+                     16. TUFTS UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dca742215bc1829fee7db95a4ca598a2.setIcon(icon_1fbe10dbb795d28931d0347cb8cb7d53);
+            
+    
+            var marker_c2ff47918c38d02ea5cee9c98586f4a2 = L.marker(
+                [49.2606, -123.246],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_f7f0713cde5d20d191cfc73891460649 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d3a83c896fb6b13a0ea241ae78ebb73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e8c06093daea659e23dea444c52dc24 = $(`<div id="html_5e8c06093daea659e23dea444c52dc24" style="width: 100.0%; height: 100.0%;"><b>17. UNIVERSITY OF BRITISH COLUMBIA</b></div>`)[0];
+                popup_1d3a83c896fb6b13a0ea241ae78ebb73.setContent(html_5e8c06093daea659e23dea444c52dc24);
+            
+        
+
+        marker_c2ff47918c38d02ea5cee9c98586f4a2.bindPopup(popup_1d3a83c896fb6b13a0ea241ae78ebb73)
+        ;
+
+        
+    
+    
+            marker_c2ff47918c38d02ea5cee9c98586f4a2.bindTooltip(
+                `<div>
+                     17. UNIVERSITY OF BRITISH COLUMBIA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2ff47918c38d02ea5cee9c98586f4a2.setIcon(icon_f7f0713cde5d20d191cfc73891460649);
+            
+    
+            var marker_397904bb90671d039d796d2c34574cfc = L.marker(
+                [45.5048, -73.5772],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_308a88d5cbe2bbe1798fbd7a229d5fe4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6cbd2431b4ebcc84db168b76eb64a98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d9f758173de7b8c6fd2329110ea5a47 = $(`<div id="html_3d9f758173de7b8c6fd2329110ea5a47" style="width: 100.0%; height: 100.0%;"><b>18. MCGILL UNIVERSITY</b></div>`)[0];
+                popup_d6cbd2431b4ebcc84db168b76eb64a98.setContent(html_3d9f758173de7b8c6fd2329110ea5a47);
+            
+        
+
+        marker_397904bb90671d039d796d2c34574cfc.bindPopup(popup_d6cbd2431b4ebcc84db168b76eb64a98)
+        ;
+
+        
+    
+    
+            marker_397904bb90671d039d796d2c34574cfc.bindTooltip(
+                `<div>
+                     18. MCGILL UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_397904bb90671d039d796d2c34574cfc.setIcon(icon_308a88d5cbe2bbe1798fbd7a229d5fe4);
+            
+    
+            var marker_6057b22cbe6a0cbfbae795e1e5b758cf = L.marker(
+                [47.6553, -122.3035],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_6f855de5afd0acf911f07207abc5f007 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56c42f093c6f6aee9215e3add9b1860c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c283c26ace97b0dcc74ee1fc4763bce = $(`<div id="html_2c283c26ace97b0dcc74ee1fc4763bce" style="width: 100.0%; height: 100.0%;"><b>19. UNIVERSITY OF WASHINGTON</b></div>`)[0];
+                popup_56c42f093c6f6aee9215e3add9b1860c.setContent(html_2c283c26ace97b0dcc74ee1fc4763bce);
+            
+        
+
+        marker_6057b22cbe6a0cbfbae795e1e5b758cf.bindPopup(popup_56c42f093c6f6aee9215e3add9b1860c)
+        ;
+
+        
+    
+    
+            marker_6057b22cbe6a0cbfbae795e1e5b758cf.bindTooltip(
+                `<div>
+                     19. UNIVERSITY OF WASHINGTON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6057b22cbe6a0cbfbae795e1e5b758cf.setIcon(icon_6f855de5afd0acf911f07207abc5f007);
+            
+    
+            var marker_85343a8e99121e61867dcbbbb1534768 = L.marker(
+                [42.3868, -72.5301],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_1ba8384c4eb45d9cacc36efbda10d5ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff8ac2286ff866124a51ad3a7fb5975c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e98d9acfed6d53dae35437542f4fabe3 = $(`<div id="html_e98d9acfed6d53dae35437542f4fabe3" style="width: 100.0%; height: 100.0%;"><b>20. UNIVERSITY OF MASSACHUSETTS SYSTEM</b></div>`)[0];
+                popup_ff8ac2286ff866124a51ad3a7fb5975c.setContent(html_e98d9acfed6d53dae35437542f4fabe3);
+            
+        
+
+        marker_85343a8e99121e61867dcbbbb1534768.bindPopup(popup_ff8ac2286ff866124a51ad3a7fb5975c)
+        ;
+
+        
+    
+    
+            marker_85343a8e99121e61867dcbbbb1534768.bindTooltip(
+                `<div>
+                     20. UNIVERSITY OF MASSACHUSETTS SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_85343a8e99121e61867dcbbbb1534768.setIcon(icon_1ba8384c4eb45d9cacc36efbda10d5ac);
+            
+    
+            var marker_461534f2061752aff13d39fbc49f9b58 = L.marker(
+                [44.9738, -93.2277],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_ea3e9070780ac6663d1c90d00d83d44d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57233498afc049d743773747b71a778c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0cad716a8a1fdc2bf40fa87a41bd1f8 = $(`<div id="html_b0cad716a8a1fdc2bf40fa87a41bd1f8" style="width: 100.0%; height: 100.0%;"><b>21. UNIVERSITY OF MINNESOTA SYSTEM</b></div>`)[0];
+                popup_57233498afc049d743773747b71a778c.setContent(html_b0cad716a8a1fdc2bf40fa87a41bd1f8);
+            
+        
+
+        marker_461534f2061752aff13d39fbc49f9b58.bindPopup(popup_57233498afc049d743773747b71a778c)
+        ;
+
+        
+    
+    
+            marker_461534f2061752aff13d39fbc49f9b58.bindTooltip(
+                `<div>
+                     21. UNIVERSITY OF MINNESOTA SYSTEM
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_461534f2061752aff13d39fbc49f9b58.setIcon(icon_ea3e9070780ac6663d1c90d00d83d44d);
+            
+    
+            var marker_0456cc0b8eafbff7c10d5454ad4e4309 = L.marker(
+                [47.6553, -122.3035],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_122cc09627bb587022e907c00f0caef6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7e558442ba4d26aa926038d043bd744 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9b3ece6e44c4806c201a1bfe103a677 = $(`<div id="html_a9b3ece6e44c4806c201a1bfe103a677" style="width: 100.0%; height: 100.0%;"><b>22. UNIVERSITY OF WASHINGTON SEATTLE</b></div>`)[0];
+                popup_a7e558442ba4d26aa926038d043bd744.setContent(html_a9b3ece6e44c4806c201a1bfe103a677);
+            
+        
+
+        marker_0456cc0b8eafbff7c10d5454ad4e4309.bindPopup(popup_a7e558442ba4d26aa926038d043bd744)
+        ;
+
+        
+    
+    
+            marker_0456cc0b8eafbff7c10d5454ad4e4309.bindTooltip(
+                `<div>
+                     22. UNIVERSITY OF WASHINGTON SEATTLE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0456cc0b8eafbff7c10d5454ad4e4309.setIcon(icon_122cc09627bb587022e907c00f0caef6);
+            
+    
+            var marker_db6e1aa9293c3d40a2038940e638b6b9 = L.marker(
+                [40.7982, -77.8599],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_2892f8cab9f69d3c341b798e653477e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef2fe2d43459af7956009e7abfe2f579 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ebe03a8eeb78d0375bad6688b7470db = $(`<div id="html_2ebe03a8eeb78d0375bad6688b7470db" style="width: 100.0%; height: 100.0%;"><b>23. PENNSYLVANIA STATE UNIVERSITY</b></div>`)[0];
+                popup_ef2fe2d43459af7956009e7abfe2f579.setContent(html_2ebe03a8eeb78d0375bad6688b7470db);
+            
+        
+
+        marker_db6e1aa9293c3d40a2038940e638b6b9.bindPopup(popup_ef2fe2d43459af7956009e7abfe2f579)
+        ;
+
+        
+    
+    
+            marker_db6e1aa9293c3d40a2038940e638b6b9.bindTooltip(
+                `<div>
+                     23. PENNSYLVANIA STATE UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db6e1aa9293c3d40a2038940e638b6b9.setIcon(icon_2892f8cab9f69d3c341b798e653477e8);
+            
+    
+            var marker_ddbb0d36452364874f9707c46e283195 = L.marker(
+                [37.4275, -122.1697],
+                {
+}
+            ).addTo(map_c3c35558ef7fb7db3c5e5721313ac664);
+        
+    
+            var icon_fe20c1c64598d87c94d538f46555e6f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_402218951b0ee74fe1bc0245aed1456b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1536fac882544063d13e496596e82eae = $(`<div id="html_1536fac882544063d13e496596e82eae" style="width: 100.0%; height: 100.0%;"><b>24. STANFORD UNIVERSITY</b></div>`)[0];
+                popup_402218951b0ee74fe1bc0245aed1456b.setContent(html_1536fac882544063d13e496596e82eae);
+            
+        
+
+        marker_ddbb0d36452364874f9707c46e283195.bindPopup(popup_402218951b0ee74fe1bc0245aed1456b)
+        ;
+
+        
+    
+    
+            marker_ddbb0d36452364874f9707c46e283195.bindTooltip(
+                `<div>
+                     24. STANFORD UNIVERSITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ddbb0d36452364874f9707c46e283195.setIcon(icon_fe20c1c64598d87c94d538f46555e6f9);
+            
+</script>
+</html>
